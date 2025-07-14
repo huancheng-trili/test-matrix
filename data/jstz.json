@@ -3,7 +3,7 @@
     "*self*": "object",
     "AbortController": "class",
     "AbortSignal": "class",
-    "AggregateError": "function",
+    "AggregateError": "missing",
     "Array": "missing",
     "ArrayBuffer": "function",
     "Atomics": {

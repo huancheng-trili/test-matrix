@@ -3,7 +3,7 @@ Module,Path,baseline,node22,node20,node18,bun,deno,workerd,wranglerUnenv
 *globals*,*self*,supported,supported,supported,supported,supported,supported
 *globals*,AbortController,supported,supported,supported,supported,supported,supported
 *globals*,AbortSignal,supported,supported,supported,supported,supported,supported
-*globals*,AggregateError,supported,supported,supported,supported,supported,supported
+*globals*,AggregateError,supported,supported,supported,supported,supported,unsupported
 *globals*,Array,supported,supported,supported,supported,supported,unsupported
 *globals*,ArrayBuffer,supported,supported,supported,supported,supported,supported
 *globals*,Atomics.*self*,supported,supported,supported,supported,supported,supported
