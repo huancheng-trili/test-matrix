@@ -29,9 +29,6 @@ jobs:
       - name: Build
         run: cd report && pnpm run build
 
-      - name: Generate Timestamp
-        run: pnpm generate:timestamp
-
       - name: Upload static files as artifact
         id: deployment
         uses: actions/upload-pages-artifact@v3 # or specific "vX.X.X" version tag for this action
