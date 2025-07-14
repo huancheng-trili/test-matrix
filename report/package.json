@@ -1,11 +1,13 @@
 {
   "name": "report",
+  "homepage": "/test-matrix",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@types/node": "^16.18.126",
     "@types/react": "^18.3.20",
     "@types/react-dom": "^18.3.6",
+    "gh-pages": "^6.3.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-scripts": "5.0.1",
@@ -17,8 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject",
-    "deploy": "pnpm run build && wrangler pages deploy ./build",
-    "preview": "pnpm run build && wrangler pages dev ./build"
+    "predeploy": "pnpm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [

@@ -2,12 +2,7 @@ name: Deploy
 on:
   push:
     branches:
-      - main
-  # Run daily at 1:15am
-  schedule:
-    - cron: "15 1 * * *"
-  # Allow ad-hoc triggering
-  workflow_dispatch:
+      - test
 
 jobs:
   publish:
@@ -16,7 +11,7 @@ jobs:
       contents: read
       deployments: write
 
-    name: Publish to Cloudflare Pages
+    name: Publish
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -29,19 +24,17 @@ jobs:
       - name: Update unenv
         run: pnpm update unenv
 
-      - name: Build
-        run: pnpm --filter report build
-
       - name: Generate Timestamp
         run: pnpm generate:timestamp
 
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CF_API_TOKEN }}
-          accountId: 8ed4d03ac99f77561d0e8c9cbcc76cb6
-          projectName: workers-nodejs-compat-matrix
-          directory: build
-          branch: main
-          workingDirectory: report
-          wranglerVersion: "3"
+      - name: Deploy
+        run: |
+          git config --global user.name $user_name
+          git config --global user.email $user_email
+          git remote set-url origin https://${github_token}@github.com/${repository}
+          cd report && pnpm run deploy
+        env:
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          repository: ${{ github.repository }}
