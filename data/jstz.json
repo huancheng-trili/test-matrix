@@ -4,7 +4,7 @@
     "AbortController": "class",
     "AbortSignal": "class",
     "AggregateError": "missing",
-    "Array": "missing",
+    "Array": "function",
     "ArrayBuffer": "function",
     "Atomics": {
       "*self*": "object",
