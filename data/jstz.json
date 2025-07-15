@@ -1,9 +1,9 @@
 {
   "*globals*": {
     "*self*": "object",
-    "AbortController": "missing",
+    "AbortController": "class",
     "AbortSignal": "class",
-    "AggregateError": "missing",
+    "AggregateError": "function",
     "Array": "function",
     "ArrayBuffer": "function",
     "Atomics": {
