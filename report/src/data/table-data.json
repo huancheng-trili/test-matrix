@@ -37,7 +37,7 @@
     "supported",
     "supported",
     "supported",
-    "supported"
+    "unsupported"
   ],
   [
     "*globals*.AbortSignal",
@@ -67,7 +67,7 @@
     "supported",
     "supported",
     "supported",
-    "unsupported"
+    "supported"
   ],
   [
     "*globals*.ArrayBuffer",

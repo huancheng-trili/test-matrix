@@ -1,10 +1,10 @@
 Module,Path,baseline,node22,node20,node18,bun,deno,workerd,wranglerUnenv
 ,,,22.14.0,4.5.1,1.2.0,2.2.8,0.1.1-alpha.3
 *globals*,*self*,supported,supported,supported,supported,supported,supported
-*globals*,AbortController,supported,supported,supported,supported,supported,supported
+*globals*,AbortController,supported,supported,supported,supported,supported,unsupported
 *globals*,AbortSignal,supported,supported,supported,supported,supported,supported
 *globals*,AggregateError,supported,supported,supported,supported,supported,unsupported
-*globals*,Array,supported,supported,supported,supported,supported,unsupported
+*globals*,Array,supported,supported,supported,supported,supported,supported
 *globals*,ArrayBuffer,supported,supported,supported,supported,supported,supported
 *globals*,Atomics.*self*,supported,supported,supported,supported,supported,supported
 *globals*,Atomics.add,supported,supported,supported,supported,supported,supported
