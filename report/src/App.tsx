@@ -59,7 +59,7 @@ const App = () => {
     const parentPath = pathParts.slice(0, pathParts.length - 1).join(".");
 
     const isExpanded = expanded.includes(parentPath);
-    const isTopLevel = pathParts.length === 1;
+    const isTopLevel = false;
 
     if (pathParts.length > 1 && !isExpanded) {
       return null;
